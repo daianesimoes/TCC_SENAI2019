@@ -1,14 +1,9 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Tcc_Senai.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
 
 namespace Tcc_Senai
 {
@@ -25,13 +20,17 @@ namespace Tcc_Senai
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<Data.IESContext>(options => options.UseSqlServer
-            (Configuration.GetConnectionString("IESConnection")));
+             (Configuration.GetConnectionString("IESConnection")));
 
             services.AddControllersWithViews();
         }
 
+
+
+
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             if (env.IsDevelopment())
             {

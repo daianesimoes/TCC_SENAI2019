@@ -12,7 +12,7 @@ namespace Tcc_Senai.Models
         public long? IdSemestre { get; set; }
         
         [Display (Name = "Semestre")]
-        public int NomeSemestre { get; set; }
+        public string NomeSemestre { get; set; }
 
         [DataType(DataType.Date)]
         [DisplayFormat (DataFormatString = "{0:yyyy}")]

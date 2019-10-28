@@ -10,7 +10,7 @@ namespace Tcc_Senai.Data
     {
         public static void Initialize(IESContext context)
         {
-            //context.Database.EnsureDeleted();
+            context.Database.EnsureDeleted();
             context.Database.EnsureCreated();
 
             if (context.Modalidades.Any())
@@ -21,7 +21,8 @@ namespace Tcc_Senai.Data
             {
                 new Modalidade {NomeModalidade="Técnico"},
                 new Modalidade {NomeModalidade="Profissional"},
-                new Modalidade {NomeModalidade="Aperfeiçoamento"}
+                new Modalidade {NomeModalidade="Aperfeiçoamento"},
+                new Modalidade {NomeModalidade="Avançado"}
             };
             foreach (Modalidade d in modalidades)
             {

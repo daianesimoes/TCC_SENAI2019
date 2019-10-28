@@ -29,7 +29,7 @@ namespace Tcc_Senai.Models
         [Display(Name = "Carga Horária")]
         public string CargaHorariaSemanal { get; set; }
 
-      //public virtual ICollection<ProfessorCurso> ProfessorCursos { get; set; }
+        public virtual ICollection<ProfessorCurso> ProfessorCursos { get; set; }
 
     }
 }
