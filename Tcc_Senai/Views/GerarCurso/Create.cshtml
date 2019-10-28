@@ -3,7 +3,7 @@
 @{
     Layout = null;
     ViewData["Title"] = "Create";
-    //Layout = "~/Views/Shared/_LayoutSenai.cshtml";
+    Layout = "~/Views/Shared/_LayoutSenai.cshtml";
 }
 
 <!DOCTYPE html>
@@ -51,9 +51,9 @@
 <div>
     <a asp-action="Index">Voltar</a>
 </div>
-
+    @*
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}
+}*@
 </body>
 </html>
