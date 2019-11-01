@@ -8,7 +8,7 @@
 
 
 <div class="card-block">
-    <div class="card-header text-white bg-danger text-center h1">
+    <div class="card-header text-white bg-primary text-center h1">
         Cadastrar Turma
     </div>
     <div class="card-body">
@@ -31,8 +31,8 @@
                 <select asp-for="IdCurso" class="form-control" asp-items="@(new SelectList(@ViewBag.Cursos, "IdCurso", "NomeCurso"))"></select>
             </div>
             <div class=" form-group text-center h3">
-                <input type="submit" value="Salvar" class="btn btn-light" />
-                <a asp-action="Index" class="btn btn-info">
+                <input type="submit" value="Salvar" class="btn btn-primary" />
+                <a asp-action="Index" class="btn btn-primary">
                     Voltar
                 </a>
             </div>

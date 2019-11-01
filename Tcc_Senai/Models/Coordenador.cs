@@ -18,7 +18,7 @@ namespace Tcc_Senai.Models
         [Display(Name = "Nome Usuário")]
         public string NomeDoUsuario { get; set; }
 
-        [RegularExpression(".+\\@.+\\..+", ErrorMessage = "O campo {0} e-mail é inválido")]
+        [RegularExpression(".+@.+\\..+", ErrorMessage = "O campo {0} e-mail é inválido")]
         public string Email { get; set; }
 
         public string Sexo { get; set; }

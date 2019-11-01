@@ -1,4 +1,5 @@
-﻿@model Tcc_Senai.Models.Professor
+﻿
+@model Tcc_Senai.Models.Professor
 
 @{
    Layout = null;
@@ -48,14 +49,17 @@
                 <span asp-validation-for="CargaHorariaSemanal" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Salvar" class="btn btn-primary" />
+                <a asp-action="Index" class="btn btn-primary">
+                    Voltar
+                </a>
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    
 </div>
      
   @*
