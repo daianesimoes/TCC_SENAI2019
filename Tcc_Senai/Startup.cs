@@ -53,7 +53,7 @@ namespace Tcc_Senai
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Acesso}/{action=LoginViewModel}/{id?}");
+                    pattern: "{controller=Home}/{action=Index}");
             });
         }
     }
