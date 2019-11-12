@@ -1,9 +1,10 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using Tcc_Senai.Models;
 
 namespace Tcc_Senai.Data
 {
-    public class IESContext : DbContext
+    public class IESContext : IdentityDbContext<Coordenador>
     {
         
         public IESContext(DbContextOptions<IESContext> options) : base(options)

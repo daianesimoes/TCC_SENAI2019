@@ -4,6 +4,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Tcc_Senai.Models;
+using Microsoft.AspNetCore.Identity;
 
 namespace Tcc_Senai
 {
@@ -21,6 +23,8 @@ namespace Tcc_Senai
         {
             services.AddDbContext<Data.IESContext>(options => options.UseSqlServer
              (Configuration.GetConnectionString("IESConnection")));
+
+            services.AddIdentity<Coordenador, IdentityRole>().AddEntityFrameworkStores<IESContext>().AddDefaultTokenProviders();
 
             services.AddControllersWithViews();
         }
@@ -53,7 +57,7 @@ namespace Tcc_Senai
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}");
+                    pattern: "{controller=Home}/{action=Login}");
             });
         }
     }
